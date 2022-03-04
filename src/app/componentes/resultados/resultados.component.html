@@ -1,0 +1,9 @@
+<div class="contenedor" style="padding: 1em; max-width: 768px; margin: 0 auto;">
+  <ion-searchbar showCancelButton="focus" animated style="margin-bottom: 1em;"></ion-searchbar>
+  
+  <ion-card *ngFor="let d of docentes" [routerLink]="d.redirectTo" style="margin-bottom: 2em;">
+    <ion-item style="padding: .5rem;" detail>
+      <ion-label>{{d.nombre}}</ion-label>
+    </ion-item>
+  </ion-card>
+</div>

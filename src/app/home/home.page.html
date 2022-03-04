@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="contenedor" style="max-width: 768px; margin: 0 auto; text-align: center;">
+      <ion-title>
+        Inicio
+      </ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="contenedor" style="padding: 2em; display: flex; flex-direction: column; height: 100%; align-items: center; justify-content: center; max-width: 768px; margin: 0 auto;">
+
+    <ion-button expand="block" color="warning" fill="solid" style="margin-bottom: 2rem; width: 100%;" (click)="registro()">
+      <ion-icon slot="icon-only" color="light" name="add"></ion-icon>
+    </ion-button>
+
+    <div class="contenedor" style= "width: 100%; flex: 1 1 auto; display: flex; flex-direction: column; align-items: center; justify-content: space-around;">
+
+      <ion-button
+        *ngFor="let c of componentes"
+        [routerLink]="c.redirectTo"
+        [color]="c.color"
+        class="inicio__btn"
+        expand="block"
+        fill="solid">
+        {{c.name}}
+      </ion-button>
+    </div>
+  </div>
+
+</ion-content>
