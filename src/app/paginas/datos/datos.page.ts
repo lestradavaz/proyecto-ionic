@@ -1,15 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 
+interface Componente {
+  name: string;
+  redirectTo: string;
+  color: string;
+}
 @Component({
   selector: 'app-datos',
   templateUrl: './datos.page.html',
   styleUrls: ['./datos.page.scss'],
 })
-export class DatosPage implements OnInit {
 
-  constructor() { }
+export class DatosPage  {
 
-  ngOnInit() {
-  }
-
+  componentes: Componente[] = [
+    {
+      name: 'Editar Usuario',
+      redirectTo: '/editar-usuario',
+      color: 'success'
+    },
+  ];
 }

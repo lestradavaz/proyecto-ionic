@@ -56,7 +56,12 @@
   <ion-button expand="block" style="margin: 1em;">
     Guardar
   </ion-button> -->
-
-  <ion-button expand="block">Editar</ion-button>
-  <router-outlet></router-outlet>
+<ion-button
+        *ngFor="let c of componentes"
+        [routerLink]="c.redirectTo"
+        [color]="c.color"
+        expand="block"
+        fill="solid">
+        {{c.name}}
+      </ion-button>
 </ion-content>
